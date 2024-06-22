@@ -1,13 +1,13 @@
-import './App.css'
+import React from 'react';
+import AppRoutes from './routes/app-routes';
+import './App.css';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <>
-      <h1 className="text-3xl text-slate-700 font-bold underline">
-        Hello world!
-      </h1>
-    </>
-  )
-}
+    <div className="App">
+      <AppRoutes />
+    </div>
+  );
+};
 
-export default App
+export default App;
