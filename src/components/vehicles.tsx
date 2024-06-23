@@ -45,6 +45,7 @@ const Vehicles: React.FC = () => {
   ) => {
     if (vehicle) {
       vehicleColors.map((color) => {
+        //@ts-ignore
         vehicle.materials[color.materialName].color = new THREE.Color(color.color);
       })
     }
@@ -64,6 +65,7 @@ const Vehicles: React.FC = () => {
 
   return (
     <>
+      {/* @ts-ignore */}
       <orbitControls args={[camera, gl.domElement]} />
       <directionalLight position={[1, 2, 3]} intensity={2} />
       <ambientLight intensity={1.5} />
